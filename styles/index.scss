@@ -1,0 +1,16 @@
+@use 'config';
+@use 'login_box';
+@use 'login_animations';
+@use 'todo_home';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: config.$font-stack;
+    font-size: 62,5%;
+}
+

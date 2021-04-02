@@ -1,0 +1,22 @@
+@use 'config';
+
+.todo__button--create {
+    @extend %button;
+    background-color: config.$button;
+    color: config.$white;
+    padding: 1rem 2rem;
+    margin: 1.5rem;
+    width: 20rem;
+}
+
+.todo__button--update {
+    @extend %button;
+    background-color: config.$primary-color;
+    color: config.$white;
+}
+
+.todo__button--delete {
+    @extend %button;
+    background-color: config.$tertiary-color;
+    color: config.$white;
+}

@@ -1,0 +1,36 @@
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+@keyframes showButton {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes apper {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

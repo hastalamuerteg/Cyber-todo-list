@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap');
+
+$font-stack: 'Lexend', sans serif;
+$primary-color: #1edac7;
+$secondary-color: #212025;
+$tertiary-color:#D26F9B;
+$button: #8357E5;
+$button-warning: #dc0000;
+$medium-gray: #ddd;
+$black:#000;
+$white: #fff;
+
+%centered-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%neon-box {
+    box-shadow: 15px 15px 25px $primary-color;
+    background-color: $secondary-color;
+    padding: 8rem 15rem;
+}
+
+%gradient-text {
+    background: -webkit-linear-gradient(180deg, $tertiary-color 0%, $primary-color 60%, $tertiary-color 90%);
+    background-clip: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+%button {
+    padding: .6rem 1rem;
+    border-radius: 2rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}

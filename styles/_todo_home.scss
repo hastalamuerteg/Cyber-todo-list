@@ -1,0 +1,138 @@
+@use 'config';
+@use 'buttons';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: config.$font-stack;
+    font-size: 62,5%;
+    
+}
+
+body {
+    background-color: config.$secondary-color;
+    overflow: hidden;
+}
+
+
+.todo__container--background {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(50%);
+    
+}
+.todo__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4rem;
+    text-align: center;
+    margin: auto;
+    
+}
+
+.todo__title {
+    @extend %gradient-text;
+    display: block;
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: .3rem;
+}
+
+.todo__create--input {
+    @extend %centered-box;
+    flex-direction: column;
+    text-transform: uppercase;
+
+    h2  {
+        color:config.$primary-color;
+        font-size: 1.5rem;
+        letter-spacing: .2rem;
+        margin: 1rem;
+    }
+
+    input {
+        background-color: transparent;
+        border: none;
+        width: 30rem;
+        padding: .8rem;
+        margin-right: 1rem;
+        border-bottom: .1rem solid config.$button;
+        caret-color: white;
+        
+        &:focus {
+            outline: none;
+            color: config.$white;
+        }
+
+        &:not(:focus) {
+            color: config.$white;
+
+        }
+
+        &::placeholder {
+            color: config.$medium-gray;
+        }
+    }
+}
+
+
+
+.todo__items {
+    @extend %neon-box;
+    border-radius: .4rem;
+    margin: 4rem 2rem;
+    padding: .5rem .7rem;
+    width: 40rem;
+    height: 30rem;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: .4rem;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 .3rem config.$button; 
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: config.$button; 
+  }
+
+
+.todo__item {
+    box-shadow: .1rem .1rem .5rem config.$tertiary-color;
+    border-radius: 1rem;
+    margin: .7rem;
+    padding: .7rem .4rem;    
+}
+
+.todo__item--title {
+    color: config.$button;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    text-align: left;
+}
+
+.todo__item--box {
+    @extend %centered-box;
+    justify-content: space-between;
+}
+
+.todo__item--description {
+    font-size: 1rem;
+    font-weight: 300;
+    color: config.$medium-gray;
+}
+
+.todo__button {
+    padding: .5rem;
+}
+
