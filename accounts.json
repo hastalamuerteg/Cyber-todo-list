@@ -1,21 +1,21 @@
 [
     {
-        "name":"jack",
+        "name":"Jack",
         "login": "jack@gmail.com",
         "password": "1234"
     },
     {
-        "name":"gabriel",
+        "name":"Gabriel",
         "login": "gabriel@gmail.com",
         "password": "2345"
     },
     {
-        "name":"cris",
+        "name":"Cris",
         "login": "cris@gmail.com",
         "password": "3456"
     },
     {
-        "name":"kate",
+        "name":"Kate",
         "login": "kate@gmail.com",
         "password": "4567"
     }

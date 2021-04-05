@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     const loginBox = $('.login__box');
     const spinner = $('.login__loader--box');
-    const welcomeMessage = $('.login__form--title');
+    const welcomeMessage = $('.login__loader--title');
     const username = $('.login__email');
     const userPassword = $('.login__password');
     const submitButton = $('.login__fields--submit');
@@ -24,9 +24,10 @@ $(document).ready(function() {
                     wrongCredentialsWarning.addClass('hidden');
                     loginBox.hide();
                     spinner.css('display', 'flex');
+                    welcomeMessage.html(`Welcome, ${processedUser.name}`)
                     setTimeout(function() {
-                        $(location).attr('href', 'todo_list.html');
-                    }, 1500)
+                        $(location).attr('href', './todo_list.html');
+                    }, 2500)
                 }
             })
             
